@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez le guide ultime pour attirer les oiseaux dans votre jardin, élaboré en collaboration avec des ornithologues et des experts.">
+  <title>Sheggell - Guide ultime pour attirer les oiseaux</title>
+  <style>
+    /* Styles généraux */
+    body {
+      background: url('Images_SHEGGELL/Jardin.png') no-repeat center center/cover;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #1a4a24;
+      margin: 0;
+    }
+    header {
+      padding: 20px;
+    }
+    .logo-container {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(5px);
+      padding: 10px;
+      display: inline-block;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    /* Logo agrandi à 300px, réduit sur mobile */
+    .logo {
+      width: 300px;
+    }
+    main {
+      padding: 50px;
+    }
+    /* Boîte contenant le contenu principal avec fond semi-transparent */
+    .content-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+    }
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 20px 10px;
+    }
+    .highlight {
+      background-color: lightgreen;
+      padding: 8px 12px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .description {
+      margin: 20px auto;
+      max-width: 90%;
+      line-height: 1.5;
+    }
+    .list {
+      text-align: left;
+      display: inline-block;
+      margin: 20px auto;
+      padding-left: 10px;
+    }
+    .list li {
+      margin-bottom: 10px;
+    }
+    .list img {
+      width: 18px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .download-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 15px 20px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .download-btn:hover {
+      background-color: #218838;
+    }
+
+    /* Popup et overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      z-index: 9;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      text-align: left;
+      max-width: 350px;
+      width: 90%;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .popup.active {
+      opacity: 1;
+    }
+    .popup form {
+      display: flex;
+      flex-direction: column;
+    }
+    .popup label {
+      margin-top: 10px;
+    }
+    .popup input {
+      display: block;
+      width: 100%;
+      margin: 5px 0 15px;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .submit-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 12px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #218838;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      main {
+        padding: 30px;
+      }
+      .title {
+        font-size: 24px;
+      }
+      .logo {
+        width: 200px;
+      }
+      .download-btn {
+        font-size: 16px;
+        padding: 12px 15px;
+      }
+      .popup {
+        width: 95%;
+        max-width: 320px;
+        padding: 20px;
+      }
+      .popup input {
+        font-size: 14px;
+        padding: 10px;
+      }
+      .submit-btn {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <div class="logo-container">
+      <img src="Images_SHEGGELL/logo_SHEGGELL.png" alt="Logo Sheggell" class="logo">
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <section class="content-box">
+      <h1 class="title">Guide ultime pour attirer les oiseaux dans votre jardin</h1>
+      <p class="highlight">Guide 100% offert</p>
+      <p class="description">
+        Ce guide a été élaboré en collaboration avec des ornithologues du monde entier et s'appuie sur des études scientifiques, des recherches approfondies et des observations de terrain issues des millions d'images partagées par notre communauté. Dans ce guide, vous trouverez :
+      </p>
+      <ul class="list">
+        <li><img src="Images_SHEGGELL/titi.png" alt="Icône">Les bases essentielles pour un jardin accueillant</li>
+        <li><img src="Images_SHEGGELL/titi.png" alt="Icône">Les secrets d'experts pour attirer des espèces spécifiques</li>
+        <li><img src="Images_SHEGGELL/titi.png" alt="Icône">Comment nourrir les oiseaux toute l'année</li>
+        <li><img src="Images_SHEGGELL/titi.png" alt="Icône">Savoir observer et identifier les oiseaux</li>
+        <li><img src="Images_SHEGGELL/titi.png" alt="Icône">Comment protéger les oiseaux</li>
+        <li><img src="Images_SHEGGELL/titi.png" alt="Icône">Comment aménager un jardin esthétique et fonctionnel</li>
+        <li><img src="Images_SHEGGELL/titi.png" alt="Icône">Les questions fréquentes et ressources supplémentaires</li>
+      </ul>
+      <div class="button-container">
+        <button class="download-btn" onclick="openPopup()">Téléchargez votre guide</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Overlay pour assombrir le fond -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Popup pour la collecte d'informations -->
+  <div class="popup" id="popup" role="dialog" aria-labelledby="popupTitle" aria-modal="true">
+    <button class="close-btn" onclick="closePopup()" aria-label="Fermer">✖</button>
+    <h2 id="popupTitle">Recevez votre guide</h2>
+    <form id="downloadForm" onsubmit="validateForm(event)">
+      <label for="name">Votre prénom :</label>
+      <input type="text" id="name" name="name" placeholder="Votre prénom" required>
+      
+      <label for="email">Votre adresse mail :</label>
+      <input type="email" id="email" name="email" placeholder="Votre adresse mail" required>
+      
+      <button type="submit" class="submit-btn">Recevoir mon guide</button>
+    </form>
+    <div id="messageConfirmation" style="display:none; margin-top:15px; color:green;"></div>
+  </div>
+
+  <script>
+    // Variables globales pour la gestion du téléchargement
+    let downloadTimer = null;
+    let downloadTriggered = false;
+    
+    // Affiche la popup avec animation
+    function openPopup() {
+      const popup = document.getElementById('popup');
+      const overlay = document.getElementById('overlay');
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+      // Forcer le reflow pour activer la transition
+      setTimeout(() => popup.classList.add('active'), 10);
+    }
+    
+    // Déclenche le téléchargement du guide
+    function triggerDownload() {
+      const link = document.createElement("a");
+      link.href = "Docu/Guide_ultime_du_jardin.pdf"; 
+      link.download = "Guide_ultime_du_jardin.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+    
+    // Ferme la popup et réinitialise les éléments
+    function actualClosePopup() {
+      const popup = document.getElementById('popup');
+      const overlay = document.getElementById('overlay');
+      popup.classList.remove('active');
+      setTimeout(() => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+        // Réinitialiser le formulaire et le message
+        document.getElementById('downloadForm').reset();
+        document.getElementById('messageConfirmation').style.display = 'none';
+        downloadTriggered = false; // Réinitialisation pour la prochaine utilisation
+      }, 300);
+    }
+    
+    // Lorsque l'utilisateur ferme manuellement la popup (via le bouton de fermeture)
+    function closePopup() {
+      if (!downloadTriggered) {
+        clearTimeout(downloadTimer);
+        downloadTriggered = true;
+        triggerDownload();
+      }
+      actualClosePopup();
+    }
+    
+    // Validation du formulaire avec vérification du domaine et lancement du timer de téléchargement
+    async function validateForm(event) {
+      event.preventDefault(); // Empêche la soumission par défaut
+      
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      // Regex exigeant un TLD d'au moins 2 caractères
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+      let errorMsg = "";
+      
+      if (name === "") {
+        errorMsg += "Veuillez entrer votre prénom.\n";
+      }
+      if (email === "" || !emailPattern.test(email)) {
+        errorMsg += "Veuillez entrer une adresse mail valide.\n";
+      }
+      
+      if (errorMsg) {
+        alert(errorMsg);
+        return;
+      }
+      
+      // Vérification de l'existence du domaine via Google DNS (enregistrements MX)
+      const domain = email.split('@')[1];
+      try {
+        const response = await fetch('https://dns.google/resolve?name=' + domain + '&type=MX');
+        const data = await response.json();
+        if (!data.Answer || data.Answer.length === 0) {
+          alert("Le domaine de l'adresse mail n'existe pas.");
+          return;
+        }
+      } catch (error) {
+        alert("Erreur lors de la vérification du domaine de l'adresse mail.");
+        return;
+      }
+      
+      // Afficher le message de confirmation personnalisé
+      const messageConfirmation = document.getElementById('messageConfirmation');
+      messageConfirmation.innerHTML = "Merci " + name + "! Voici votre guide.<br>Nous comptons sur vous pour accueillir nos amis les oiseaux.";
+      messageConfirmation.style.display = 'block';
+      
+      // Déclenchement automatique du téléchargement après 10 secondes
+      downloadTimer = setTimeout(autoDownload, 10000);
+    }
+    
+    // Fonction appelée après 10 secondes pour lancer le téléchargement si l'utilisateur n'a pas fermé la popup
+    function autoDownload() {
+      if (!downloadTriggered) {
+        downloadTriggered = true;
+        triggerDownload();
+        actualClosePopup();
+      }
+    }
+  </script>
+</body>
+</html>
